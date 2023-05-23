@@ -2,25 +2,20 @@
 
 //2.1 Remove Dups
 
-const removeDups = (node) => {
-  const dupCounter = new Map();
+const removeDups = (head) => {
+  let current = head;
 
-  const makeNode = (val) => {
-    let node = {
-      value: val,
-      next: null,
-    };
-    return node;
-  };
-  const traverse = (node) => {
-    if (node.value === null) {
-      return;
+  while (current != null) {
+    let runner = current;
+    while (runner.next != null) {
+      if (runner.next.data === current.data) {
+        runner.next = runner.next.next;
+      } else {
+        runner = runner.next;
+      }
     }
-    let prevCount = dupCounter.get(node.value) || 0;
-    if (prevCount !== 0) {
-      node.next = node.next.next;
-    }
-    dupCounter.set(node.value, prevCount++);
-    traverse(node.next);
-  };
+    current = current.next;
+  }
 };
+
+//
