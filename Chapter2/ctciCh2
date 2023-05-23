@@ -1,1 +1,26 @@
 //Linked Lists
+
+//2.1 Remove Dups
+
+const removeDups = (node) => {
+  const dupCounter = new Map();
+
+  const makeNode = (val) => {
+    let node = {
+      value: val,
+      next: null,
+    };
+    return node;
+  };
+  const traverse = (node) => {
+    if (node.value === null) {
+      return;
+    }
+    let prevCount = dupCounter.get(node.value) || 0;
+    if (prevCount !== 0) {
+      node.next = node.next.next;
+    }
+    dupCounter.set(node.value, prevCount++);
+    traverse(node.next);
+  };
+};
