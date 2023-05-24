@@ -53,3 +53,24 @@ const returnKth = (head, k) => {
   }
   return p2;
 };
+
+//2.3 Delete Middle Node
+
+//why I couldnt solve
+//I ASSUMED I need access to the previous node. when thinking of a chain, you can either attach the previous link to the next link, or you can MAKE the next link the current link
+//this is where visual respresentations become tricky
+//remember all objects are mutable, and can be changed into one another. moving and copying/changing are the same thing.
+
+//when u copy a node, including the data and the .next, the whole chain is copied, not just the next node
+
+const deleteMiddle = (node) => {
+  if (node === null || node.next === null) {
+    return false;
+  }
+  //create new Node with data from the next node
+
+  let next = node.next;
+  node.data = next.data;
+  node.next = next.next;
+  return true;
+};
