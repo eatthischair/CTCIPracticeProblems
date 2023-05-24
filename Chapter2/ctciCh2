@@ -18,4 +18,38 @@ const removeDups = (head) => {
   }
 };
 
-//
+//2.2 Return Kth to Last
+//find length of LL
+//run two pointers, when first reaches end, update length var
+//have slower pointer count every iteration, when it reaches length - k, return data
+
+// const returnKth = (head, k) => {
+//   let current = head;
+//   let LLmap = new Map();
+//   let depth = 0;
+//   while (current.next !== null) {
+//     LLmap.set(depth, current.val);
+//     depth++;
+//     current = current.next;
+//   }
+//   let depthToFind = depth - k;
+//   let kThNode = LLmap.get(depthToFind);
+//   return kThNode;
+// };
+//solution above doesnt work becauuse you want the node, not the value of the node.
+
+const returnKth = (head, k) => {
+  let p1 = head;
+  let p2 = head;
+  for (let i = 0; i < k; i++) {
+    if (p1 === null) {
+      return null;
+    }
+    p1 = p1.next;
+  }
+  while (p1 !== null) {
+    p1 = p1.next;
+    p2 = p2.next;
+  }
+  return p2;
+};
