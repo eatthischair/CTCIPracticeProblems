@@ -108,3 +108,19 @@ const partition = (list, partitionVal) => {
 /* TESTS */
 // Input: 3 -> 5 -> 8 -> 5 -> 10 -> 2 -> 1 [partition = 5]
 // Output: 3 -> 2 -> 1 -> 5 -> 5 -> 8 -> 10
+
+//2.5
+const sumLists = (list1, list2) => {
+  let str1 = "";
+  let str2 = "";
+
+  let depth = 0;
+  let multStr = "1" + "0".repeat(depth);
+  let multiplier = Number(multStr);
+
+  let sum = 0;
+  while (list1.next && list2.next) {
+    sum += (list1.value + list2.value) * multiplier;
+  }
+  return sum;
+};
