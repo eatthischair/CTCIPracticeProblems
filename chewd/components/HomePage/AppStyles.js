@@ -34,8 +34,7 @@ export const styles = StyleSheet.create({
     ...StyleSheet.absoluteFillObject,
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center',
-    marginTop: 50, // Adjust based on your UI
+    justifyContent: 'space-evenly',
     backgroundColor: '#fff8e7',
   },
   App: {
@@ -43,6 +42,16 @@ export const styles = StyleSheet.create({
     backgroundColor: '#9dd3fa', // Set your desired background color here
   },
   TextInput: {
+    height: 60,
     color: 'black',
+    padding: 4,
+    margin: 4,
+    borderWidth: 1,
+    borderColor: 'white',
   },
+  text: {
+    margin: 4,
+    padding: 4,
+
+  }
 });

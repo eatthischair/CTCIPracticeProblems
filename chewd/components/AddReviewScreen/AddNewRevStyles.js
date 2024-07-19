@@ -96,6 +96,8 @@ export const styles = StyleSheet.create({
   textInput: {
     fontSize: 20,
     color: 'black',
+    marginTop: 10,
+    margin: 4,
   },
   TouchableOpacity: {
     padding: 20,
@@ -104,7 +106,6 @@ export const styles = StyleSheet.create({
   },
   ScrollView: {
     alignItems: 'center',
-    marginTop: 20,
     padding: 20,
     backgroundColor: '#fff8e7',
   },

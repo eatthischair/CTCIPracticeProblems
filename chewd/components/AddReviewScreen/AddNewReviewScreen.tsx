@@ -7,6 +7,7 @@ import {
   TextInput,
   TouchableOpacity,
   Alert,
+  Pressable,
 } from 'react-native';
 import axios from 'axios';
 import firestore from '@react-native-firebase/firestore';
@@ -116,7 +117,7 @@ function AddNewReviewScreen({route, navigation}) {
       tags: tags !== undefined ? tags?.split(',') : [],
     };
     if (!sendObj.placeName) {
-      Alert.alert('Please choose a restaurant name');
+      Alert.alert('Please choose a restaurant');
     } else {
       firestore()
         .collection('test1')
@@ -178,10 +179,13 @@ function AddNewReviewScreen({route, navigation}) {
         placeholderTextColor="#000000"
       />
       <CustomTouchable
-        title="Add Dish"
+      title="Add Dish"
+        style={styles.Homebuttons}
         onPress={() =>
           navigation.navigate('AddDish', {onAddDish: addDishCallback})
-        }></CustomTouchable>
+        }>
+          {/* <Text style={styles.buttonText}>Add Dish</Text> */}
+        </CustomTouchable>
       <Text
         allowFontScaling={true}
         style={{color: 'black', fontSize: 14}}>
@@ -213,7 +217,7 @@ function AddNewReviewScreen({route, navigation}) {
       )}
       {ratings.map((item, index) => (
         <React.Fragment key={index}>
-          <Text allowFontScaling={true} style={styles.buttonText}>
+          <Text style={styles.buttonText}>
             {item.label}
           </Text>
           <Stars

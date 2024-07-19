@@ -18,7 +18,7 @@ export const styles = StyleSheet.create({
   },
   map: {
     ...StyleSheet.absoluteFillObject,
-    flex: 1,
+    // flex: 1,
   },
   buttonContainer: {
     flex: 1,

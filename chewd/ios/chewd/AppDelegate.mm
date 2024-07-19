@@ -8,17 +8,14 @@
 
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTLinkingManager.h>
-#import <GoogleMaps/GoogleMaps.h>
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [GMSServices pxprovideAPIKey:@"AIzaSyDqjVYRGzBl77KzoECQsCDN9qmQT4KixF4"]; // add this line using the api key obtained from Google Console
-
-// @generated begin react-native-maps-init - expo prebuild (DO NOT MODIFY) sync-65194441bed665250f9386ee992255a16ff15eed
+// @generated begin react-native-maps-init - expo prebuild (DO NOT MODIFY) sync-ac2c08a22b83e11c3d611f41535c21ef8b66eb19
 #if __has_include(<GoogleMaps/GoogleMaps.h>)
-  [GMSServices provideAPIKey:@"AIzaSyDqjVYRGzBl77KzoECQsCDN9qmQT4KixF4"];
+  [GMSServices provideAPIKey:@"AIzaSyBmYZErN4hHAT_W4uQFGnHIkAQu8WddO5E"];
 #endif
 // @generated end react-native-maps-init
 // @generated begin @react-native-firebase/app-didFinishLaunchingWithOptions - expo prebuild (DO NOT MODIFY) sync-ecd111c37e49fdd1ed6354203cd6b1e2a38cccda

@@ -80,7 +80,7 @@ const SignupScreen = () => {
       />
 
       <TextInput
-        placeholder="Maybe use the same @ as your IG or Twitter :)"
+        placeholder="Username (Maybe use the same @ as your IG or Twitter)"
         value={username}
         onChangeText={setUsername}
         style={styles.TextInput}
@@ -88,6 +88,7 @@ const SignupScreen = () => {
       />
 
       <TextInput
+        style={styles.TextInput}
         placeholder="Password"
         value={password}
         secureTextEntry
@@ -96,7 +97,7 @@ const SignupScreen = () => {
       />
       {error ? <Text allowFontScaling={true}>{error}</Text> : null}
       <Button title="Sign Up" onPress={handleSignUp} />
-      <Text allowFontScaling={true} style={styles.TextInput}>
+      <Text style={styles.text} allowFontScaling={true}>
         Already have an account?
       </Text>
       <Button

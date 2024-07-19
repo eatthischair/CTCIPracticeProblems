@@ -1,4 +1,4 @@
-import {View, Dimensions, Platform, Pressable, Text} from 'react-native';
+import {View, Dimensions, Platform, Pressable, Text, StatusBar, SafeAreaView} from 'react-native';
 
 import {useContext, useEffect} from 'react';
 import {useUser} from '../../UserContext'; // Path to your UserContext
@@ -47,35 +47,29 @@ const HomeScreen = ({route, navigation}) => {
   }, [isFocused]);
 
   return (
-    <View style={styles.Homecontainer}>
+    <SafeAreaView style={styles.Homecontainer}>
       <Pressable
         title="My Chew"
         onPress={() => handleNavigation('Profile')}
         style={[styles.Homebuttons, styles.MyChew]}
       >
-        <Text>My Chew</Text>
+        <Text style={styles.HomebuttonText}>My Chew</Text>
       </Pressable>
       <Pressable
         title="Map"
         onPress={() => handleNavigation('Map')}
         style={[styles.Homebuttons, styles.Map]}
       >
-        <Text>Map</Text>
+        <Text style={styles.HomebuttonText}>Map</Text>
       </Pressable>
       <Pressable
         title="Find Friends"
         onPress={() => handleNavigation('Find Friends')}
         style={[styles.Homebuttons, styles.FindFriends]}
       >
-        <Text>Find Friends</Text>
+        <Text style={styles.HomebuttonText}>Find Friends</Text>
       </Pressable>
-
-      {/* <CustomTouchable
-        title="Friends Chew"
-        onPress={() => handleNavigation('Feed')}
-      /> */}
-      {/* <CustomTouchable title="Verified Chewologists" /> */}
-    </View>
+    </SafeAreaView>
   );
 };
 

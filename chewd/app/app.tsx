@@ -24,7 +24,7 @@ import {UserProvider} from '../UserContext';
 import UserProfile from '../components/ProfileScreen/UserProfile';
 import Login from '../components/Login/Login';
 import SignupScreen from '../components/Login/SignupScreen';
-import Feed from '../components/FeedPage/Feed';
+// import Feed from '../components/FeedPage/Feed';
 import Map from '../components/MapScreen/Map';
 import RenderList from '../components/ProfileScreen/RenderList';
 import HomeScreen from '../components/HomePage/HomeScreen';
@@ -93,7 +93,7 @@ function App(): React.JSX.Element {
               iconName = 'home';
             } else if (route.name === 'Map') {
               iconName = 'map-outline';
-            } else if (route.name === 'AddNewReview') {
+            } else if (route.name === 'Review') {
               iconName = 'add-circle-outline';
             } else if (route.name === 'Profile') {
               iconName = 'person-outline';
@@ -108,8 +108,8 @@ function App(): React.JSX.Element {
         <Tab.Screen name="Home" component={HomeScreen} />
 
         <Tab.Screen name="Map" component={Map} />
-        <Tab.Screen name="AddNewReview" component={AddNewReviewScreen} />
-        <Tab.Screen name="Feed" component={Feed} />
+        <Tab.Screen name="Review" component={AddNewReviewScreen} />
+        {/* <Tab.Screen name="Feed" component={Feed} /> */}
         <Tab.Screen name="Profile" component={UserProfile} />
       </Tab.Navigator>
     );

@@ -17,7 +17,7 @@
       "bundleIdentifier": "com.anonymous.chewd",
       "googleServicesFile": "GoogleService-Info.plist",
       "config": {
-        "googleMapsApiKey": "AIzaSyDqjVYRGzBl77KzoECQsCDN9qmQT4KixF4"
+        "googleMapsApiKey": "AIzaSyBmYZErN4hHAT_W4uQFGnHIkAQu8WddO5E"
       },
       "infoPlist": {
         "NSLocationWhenInUseUsageDescription": "This app needs access to location when open to show your position on the map."
@@ -45,12 +45,6 @@
           "ios": {
             "useFrameworks": "static"
           }
-        }
-      ],
-      [
-        "react-native-maps",
-        {
-          "provider": "google"
         }
       ]
     ],

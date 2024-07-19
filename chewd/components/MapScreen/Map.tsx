@@ -10,7 +10,7 @@ import {
   Pressable,
   Alert,
 } from 'react-native';
-import {GestureHandlerRootView} from 'react-native-gesture-handler';
+// import {GestureHandlerRootView} from 'react-native-gesture-handler';
 
 import MapModal from './MapModal';
 import ReviewModal from './ReviewModal';
@@ -145,9 +145,9 @@ function Map({route}) {
 
   // eslint-disable-next-line react/no-unstable-nested-components
   return (
-    <GestureHandlerRootView style={{flex: 1}}>
-      <View style={styles.container}>
-        <Modal
+    // <GestureHandlerRootView style={{flex: 1}}>
+      <View style={styles.container} pointerEvents="box-none">
+        {/* <Modal
           animationType="slide"
           transparent={true}
           visible={modalVisible}
@@ -165,7 +165,7 @@ function Map({route}) {
               </Text>
             </Pressable>
           </View>
-        </Modal>
+        </Modal> */}
         {/*
         <Modal
           animationType="slide"
@@ -188,6 +188,10 @@ function Map({route}) {
 
           provider={PROVIDER_GOOGLE || null}
           style={styles.map}
+          scrollEnabled={true}
+          zoomEnabled={true}
+          pitchEnabled={true}
+          rotateEnabled={true}
           initialRegion={{
             latitude: 32.7767,
             longitude: -96.797,
@@ -203,7 +207,7 @@ function Map({route}) {
                     longitude: marker.coords.lng,
                   }}
                   title={marker.placeName}
-                  // description={marker.ratings}
+                  description={JSON.stringify(marker.ratings)}
                   onPress={() => handleMarkerPress(marker)}
                 />
               ))
@@ -268,7 +272,7 @@ function Map({route}) {
           </View>
         </View>
       </View>
-    </GestureHandlerRootView>
+    // </GestureHandlerRootView>
   );
 }
 
