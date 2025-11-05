@@ -2380,7 +2380,7 @@ PODS:
   - RecaptchaInterop (100.0.0)
   - RNCAsyncStorage (1.23.1):
     - React-Core
-  - RNFBApp (20.2.0):
+  - RNFBApp (20.3.0):
     - Firebase/CoreOnly (= 10.29.0)
     - React-Core
   - RNFBAuth (20.2.0):
@@ -2815,7 +2815,7 @@ SPEC CHECKSUMS:
   ReactCommon: 4a09c7d8a06e93c1e2e988a3b9f3db3d2449f2fc
   RecaptchaInterop: 7d1a4a01a6b2cb1610a47ef3f85f0c411434cb21
   RNCAsyncStorage: 826b603ae9c0f88b5ac4e956801f755109fa4d5c
-  RNFBApp: 801b0c9d1adb238aa4365f4863390ed6e89d549c
+  RNFBApp: a7aff07a7f212149539fce51a1326c6d208b03ad
   RNFBAuth: 86d36e4b90e91245e013032ed1c860a97b75fb59
   RNFBDatabase: c8ad3dcc3f8b48bb37eab104b5b8f4821bdef2b1
   RNFBFirestore: 308f00f523c31b8104e084bc24a868cd66970fa3

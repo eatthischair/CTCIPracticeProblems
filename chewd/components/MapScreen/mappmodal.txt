@@ -1,0 +1,37 @@
+         <Modal
+          animationType="slide"
+          transparent={true}
+          visible={modalVisible}
+          onRequestClose={() => {
+            Alert.alert('Modal has been closed.');
+            setModalVisible(!modalVisible);
+          }}>
+          <View style={styles.modalView}>
+            <MapModal></MapModal>
+            <Pressable
+              style={[styles.button, styles.buttonClose]}
+              onPress={() => setModalVisible(!modalVisible)}>
+              <Text allowFontScaling={true} style={styles.textStyle}>
+                Go Back
+              </Text>
+            </Pressable>
+          </View>
+        </Modal>
+
+        <Modal
+          animationType="slide"
+          transparent={true}
+          visible={reviewModalVisible}
+          onRequestClose={() => {
+            Alert.alert('Modal has been closed.');
+            setReviewModalVisible(!reviewModalVisible);
+          }}>
+          <View style={styles.modalView}>
+            <ReviewModal review={selectedMarker}></ReviewModal>
+            <Pressable
+              style={[styles.button, styles.buttonClose]}
+              onPress={() => setReviewModalVisible(!reviewModalVisible)}>
+              <Text style={styles.textStyle}>Go Bacc</Text>
+            </Pressable>
+          </View>
+        </Modal>

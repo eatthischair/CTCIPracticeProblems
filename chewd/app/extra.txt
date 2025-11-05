@@ -1,0 +1,29 @@
+    //     <Stack.Screen name="Login" component={Login} />
+    //     <Stack.Screen name="Reviews" component={RenderList} />
+    //     <Stack.Screen name="Sign Up" component={SignupScreen} />
+    //     <Stack.Screen name="FriendsProfile" component={ViewFriendsProfile} />
+
+    //     <Stack.Screen name="Edit Profile" component={EditProfile} />
+    //     <Stack.Screen name="Find Friends" component={FindFriends} />
+    //     <Stack.Screen name="Followers/Following" component={RenderFollowList} />
+
+    //     <Tab.Screen name="YetToReview" component={YetToReviewScreen} />
+    //     <Tab.Screen name="AddDish" component={AddDish} />
+    //   </Stack.Navigator>
+
+
+
+           <Stack.Navigator>
+         {user ? (
+           <Stack.Screen
+             name="Tabs"
+             component={MyTabs}
+             options={{headerShown: false}}
+           />
+         ) : (
+           <Stack.Screen name="SignUp" component={SignupScreen} />
+         )}
+
+
+
+        <Tab.Screen name="Home" component={HomeScreen} />

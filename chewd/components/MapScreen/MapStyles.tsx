@@ -11,35 +11,36 @@ export const styles = StyleSheet.create({
   },
   container: {
     ...StyleSheet.absoluteFillObject,
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginTop: 50, // Adjust based on your UI
+    // flex: 1,
+    borderColor: 'black',
+    borderWidth: 2,
   },
   map: {
     ...StyleSheet.absoluteFillObject,
-    // flex: 1,
+    flex: 1,
+    // borderColor: 'red',
+    // borderWidth: 2,
   },
   buttonContainer: {
-    flex: 1,
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    height: '10%',
     justifyContent: 'flex-start',
     alignItems: 'center',
-    paddingTop: 10,
+    paddingTop: 2,
+    borderColor: 'red',
+    borderWidth: 2,
   },
   buttonRow: {
-    // position: 'absolute',
-    // top: 0, // Adjust based on your needs
-    // left: 10, // Adjust based on your needs
-    // flexDirection: 'row', // Align children horizontally
-    // justifyContent: 'flex-start',
-    // gap: 10,
-    // height: height / 20,
-    // width: 100,
     width: '100%',
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'center',
     paddingHorizontal: 10,
+    borderColor: 'red',
+    borderWidth: 2,
   },
   centeredView: {
     flex: 1,

@@ -12,6 +12,8 @@ import {
 } from 'react-native';
 // import {GestureHandlerRootView} from 'react-native-gesture-handler';
 
+import { SafeAreaView } from 'react-native-safe-area-context';
+
 import MapModal from './MapModal';
 import ReviewModal from './ReviewModal';
 import {useUser} from '../../UserContext'; // Path to your UserContext
@@ -143,11 +145,15 @@ function Map({route}) {
     setFavoritesHidden(!favoritesHidden);
   };
 
+  const trackTouches = () => {
+    console.log('touch works')
+  }
   // eslint-disable-next-line react/no-unstable-nested-components
   return (
-    // <GestureHandlerRootView style={{flex: 1}}>
-      <View style={styles.container} pointerEvents="box-none">
-        {/* <Modal
+  // <GestureHandlerRootView style={{flex: 1}}>
+  <View style={styles.container}>
+
+         <Modal
           animationType="slide"
           transparent={true}
           visible={modalVisible}
@@ -165,8 +171,8 @@ function Map({route}) {
               </Text>
             </Pressable>
           </View>
-        </Modal> */}
-        {/*
+        </Modal>
+{/*
         <Modal
           animationType="slide"
           transparent={true}
@@ -184,8 +190,8 @@ function Map({route}) {
             </Pressable>
           </View>
         </Modal> */}
-        <MapView
 
+        <MapView
           provider={PROVIDER_GOOGLE || null}
           style={styles.map}
           scrollEnabled={true}
@@ -198,6 +204,7 @@ function Map({route}) {
             latitudeDelta: 0.1,
             longitudeDelta: 0.1,
           }}>
+
           {documents
             ? documents.map((marker, index) => (
                 <Marker
@@ -215,7 +222,6 @@ function Map({route}) {
           {documents2
             ? documents2.map((marker, index) => (
                 <Marker
-                  style={{width: width / 2, height: height / 2}}
                   key={index}
                   coordinate={{
                     latitude: marker.coords.lat,
@@ -230,7 +236,6 @@ function Map({route}) {
           {documents3
             ? documents3.map((marker, index) => (
                 <Marker
-                  style={{width: width / 2, height: height / 2}}
                   key={index}
                   coordinate={{
                     latitude: marker.coords.lat,
@@ -246,25 +251,21 @@ function Map({route}) {
         <View style={styles.buttonContainer}>
           <View style={styles.buttonRow}>
             <Button
-              // style={styles.button}
               onPress={() => toggleFavorites()}
               title="Chewiest"
               color={!favoritesHidden ? '#cf610c' : '#000000'}
             />
             <Button
-              // style={styles.button}
               onPress={() => toggleYetToReview()}
               title="Yet2Chew"
               color={!yetToReviewHidden ? '#121fde' : '#000000'}
             />
             <Button
-              // style={styles.button}
               onPress={() => toggleReviewed()}
               title="Chew'd"
               color={!reviewedHidden ? '#db1d3c' : '#000000'}
             />
             <Button
-              // style={styles.button}
               onPress={() => setModalVisible(!modalVisible)}
               title="+Yet2Chew"
               color={'#34B75F'}
